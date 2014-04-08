@@ -16,8 +16,8 @@
 
 using namespace std;
 
-char *inFromArduino = new char[255];
-char *outToArduino = new char[255];
+
+
 
 int main(int argc, const char * argv[]) {
     
@@ -73,17 +73,10 @@ int main(int argc, const char * argv[]) {
     
     
 // Get Presets
-    tcflush(fd, TCIFLUSH);
     
-    int i=0;
-    while (i<=5 && !write(fd, "d", 1)) i++;
+    tcflush(fd, TCIFLUSH);
 
-    int bytes = 0;
-    while (bytes < 109) {
-        ioctl(fd, FIONREAD, &bytes);
-    }
-    read(fd,inFromArduino,109);
-    cout<<inFromArduino<<endl<<flush;
+    get_presets(fd);
     
     
     
