@@ -9,19 +9,76 @@
 #ifndef GirinoScope_Serial_h
 #define GirinoScope_Serial_h
 
+int fd;
+
 char *inFromArduino = new char[255];
 char *outToArduino = new char[255];
 
+long int buffsiz;
+long int baudrat;
+long int waitdur;
+long int prescal;
+long int trigger;
+long int thresho;
+
+void check_ready(int fd) {
+    int Scope_Not_Ready = 1;
+    
+    
+    while (Scope_Not_Ready == 1) {
+        
+        if (fd == -1)
+            std::cout << "Error Opening Port" << std::endl;
+        else
+            std::cout << "fd: " << fd << std::endl;
+        
+        
+        struct termios options;
+        tcgetattr(fd,&options);
+        cfsetispeed(&options,B115200);
+        cfsetospeed(&options,B115200);
+        options.c_cflag |= (CLOCAL | CREAD);
+        options.c_cflag &= ~PARENB;
+        options.c_cflag &= ~CSTOPB;
+        options.c_cflag &= ~CSIZE;
+        options.c_cflag |= CS8;
+        tcsetattr(fd,TCSANOW,&options);
+        
+        
+        std::string Scope_Ready = "";
+        std::string Scope_Ready1 = "Girino ready";
+        int i=0;
+        
+        while (Scope_Ready!=Scope_Ready1 || i<=13) {
+            read(fd, inFromArduino, 1);
+            Scope_Ready.append(inFromArduino);
+            //sleep(1);
+            i++;
+        }
+        
+        if (Scope_Ready == Scope_Ready1) {
+            std::cout<<Scope_Ready<<std::endl;
+            Scope_Not_Ready = 0;
+        }
+        else if (Scope_Ready != Scope_Ready1) {
+            Scope_Not_Ready = 1;
+            Scope_Ready = "";
+            std::cout<<"Scope Not Ready"<<std::endl;
+            close(fd);
+            sleep(1);
+        }
+    }
+}
 
 // Get Presets Function
-long int * get_presets(int fd) {
+void get_presets(int fd) {
     
     tcflush(fd, TCIFLUSH);
 
-    int i=0;
-    while (i<=5 && !write(fd, "d", 1)) i++;
+    while (!write(fd, "d", 1));
 
     int bytes = 0;
+    
     while (bytes < 109) {
         ioctl(fd, FIONREAD, &bytes);
     }
@@ -31,43 +88,27 @@ long int * get_presets(int fd) {
     char* presets_ch = strtok(inFromArduino, ":\n");
 
         presets_ch = strtok(NULL, ":\n");
-    long int buffsiz=atol(presets_ch);
+    buffsiz=atol(presets_ch);
         presets_ch = strtok(NULL, ":\n");
         presets_ch = strtok(NULL, ":\n");
-    long int baudrat=atol(presets_ch);
+    baudrat=atol(presets_ch);
         presets_ch = strtok(NULL, ":\n");
         presets_ch = strtok(NULL, ":\n");
-    long int waitdur=atol(presets_ch);
+    waitdur=atol(presets_ch);
         presets_ch = strtok(NULL, ":\n");
         presets_ch = strtok(NULL, ":\n");
-    long int prescal=atol(presets_ch);
+    prescal=atol(presets_ch);
         presets_ch = strtok(NULL, ":\n");
         presets_ch = strtok(NULL, ":\n");
-    long int trigger=atol(presets_ch);
+    trigger=atol(presets_ch);
         presets_ch = strtok(NULL, ":\n");
         presets_ch = strtok(NULL, ":\n");
-    long int thresho=atol(presets_ch);
+    thresho=atol(presets_ch);
 
-    long int presets[6];
-    presets[0]=buffsiz;
-    presets[1]=baudrat;
-    presets[2]=waitdur;
-    presets[3]=prescal;
-    presets[4]=trigger;
-    presets[5]=thresho;
+}
+
+void get_data(int fd) {
     
-    return presets;
-    
-//    std::cout<<"buffersize: "<<buffsiz<<std::endl;
-//    std::cout<<"baudrate:   "<<baudrat<<std::endl;
-//    std::cout<<"waitdur:    "<<waitdur<<std::endl;
-//    std::cout<<"Prescaler   "<<prescal<<std::endl;
-//    std::cout<<"Trigger     "<<trigger<<std::endl;
-//    std::cout<<"Threshold   "<<thresho<<std::endl;
-
-
-//    std::cout<<presets1[1,2]<<std::endl;
-//    std::cout<<inFromArduino<<std::endl<<std::flush;
 }
 
 #endif

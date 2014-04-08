@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C2391D218F4963600F77841 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C2391D118F4963600F77841 /* OpenGL.framework */; };
+		1C2391D418F4966000F77841 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C2391D318F4966000F77841 /* GLUT.framework */; };
 		1C28427F18F34CC700D11ADC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C28427E18F34CC700D11ADC /* main.cpp */; };
 		1C28428118F34CC700D11ADC /* GirinoScope.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1C28428018F34CC700D11ADC /* GirinoScope.1 */; };
 /* End PBXBuildFile section */
@@ -26,6 +28,9 @@
 
 /* Begin PBXFileReference section */
 		1C2391CE18F4632200F77841 /* Serial.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Serial.h; sourceTree = "<group>"; };
+		1C2391D118F4963600F77841 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		1C2391D318F4966000F77841 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		1C2391D518F49F0B00F77841 /* Display.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Display.h; sourceTree = "<group>"; };
 		1C28427B18F34CC700D11ADC /* GirinoScope */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GirinoScope; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C28427E18F34CC700D11ADC /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		1C28428018F34CC700D11ADC /* GirinoScope.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = GirinoScope.1; sourceTree = "<group>"; };
@@ -36,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C2391D418F4966000F77841 /* GLUT.framework in Frameworks */,
+				1C2391D218F4963600F77841 /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,6 +52,8 @@
 		1C28427218F34CC700D11ADC = {
 			isa = PBXGroup;
 			children = (
+				1C2391D318F4966000F77841 /* GLUT.framework */,
+				1C2391D118F4963600F77841 /* OpenGL.framework */,
 				1C28427D18F34CC700D11ADC /* GirinoScope */,
 				1C28427C18F34CC700D11ADC /* Products */,
 			);
@@ -62,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				1C28427E18F34CC700D11ADC /* main.cpp */,
+				1C2391D518F49F0B00F77841 /* Display.h */,
 				1C2391CE18F4632200F77841 /* Serial.h */,
 				1C28428018F34CC700D11ADC /* GirinoScope.1 */,
 			);
