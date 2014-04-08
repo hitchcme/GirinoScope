@@ -10,6 +10,7 @@
 #include <termios.h>
 #include <unistd.h>
 #include <fcntl.h>
+#include <sys/ioctl.h>
 
 #include "Serial.h"
 
@@ -69,10 +70,23 @@ int main(int argc, const char * argv[]) {
             sleep(1);
         }
     }
+    
+    
+// Get Presets
     tcflush(fd, TCIFLUSH);
-    write(fd, "d", 1);
-    read(fd,inFromArduino,100);
-    cout<<inFromArduino<<endl;
+    
+    int i=0;
+    while (i<=5 && !write(fd, "d", 1)) i++;
+
+    int bytes = 0;
+    while (bytes < 109) {
+        ioctl(fd, FIONREAD, &bytes);
+    }
+    read(fd,inFromArduino,109);
+    cout<<inFromArduino<<endl<<flush;
+    
+    
+    
     
     cout << "program terminated" << endl;
     close(fd);
