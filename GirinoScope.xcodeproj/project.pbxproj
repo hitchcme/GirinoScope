@@ -25,6 +25,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1C2391CE18F4632200F77841 /* Serial.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Serial.h; sourceTree = "<group>"; };
 		1C28427B18F34CC700D11ADC /* GirinoScope */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GirinoScope; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C28427E18F34CC700D11ADC /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		1C28428018F34CC700D11ADC /* GirinoScope.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = GirinoScope.1; sourceTree = "<group>"; };
@@ -61,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				1C28427E18F34CC700D11ADC /* main.cpp */,
+				1C2391CE18F4632200F77841 /* Serial.h */,
 				1C28428018F34CC700D11ADC /* GirinoScope.1 */,
 			);
 			path = GirinoScope;
@@ -216,6 +218,7 @@
 				1C28428618F34CC700D11ADC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
