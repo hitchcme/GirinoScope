@@ -39,28 +39,7 @@ int main(int argc, const char * argv[]) {
                       // prescaler, trigger, and threshold.
     get_data(fd);
     
-    /* perform initialization NOT OpenGL/GLUT dependent,
-     as we haven't created a GLUT window yet */
-    init();
-    
-    /* initialize GLUT, let it extract command-line
-     GLUT options that you may provide
-     - NOTE THE '&' BEFORE argc */
-    char *myargv [1];
-    int myargc=1;
-    myargv [0]=strdup ("GirinoScope");
-    glutInit(&myargc, myargv);
-    
-    /* specify the display to be single
-     buffered and color as RGBA values */
-    glutInitDisplayMode(GLUT_SINGLE | GLUT_RGBA);
-    
-    /* set the initial window size */
-    glutInitWindowSize((int) width, (int) height);
-    
-    /* create the window and store the handle to it */
-    wd = glutCreateWindow(myargv[0] /* title */ );
-    
+    init_disp();
     /* --- register callbacks with GLUT --- */
     
     /* register function to handle window resizes */
@@ -71,8 +50,7 @@ int main(int argc, const char * argv[]) {
     
     /* start the GLUT main loop */
     glutMainLoop();
-
-
+    
     
     
     

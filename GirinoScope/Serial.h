@@ -27,8 +27,12 @@ void check_ready(int fd) {
     
     while (Scope_Not_Ready == 1) {
         
-        if (fd == -1)
+        if (fd == -1) {
             std::cout << "Error Opening Port" << std::endl;
+            Scope_Not_Ready=0;
+            close(fd);
+            exit(0);
+        }
         else
             std::cout << "fd: " << fd << std::endl;
         
