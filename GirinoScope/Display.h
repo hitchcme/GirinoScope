@@ -72,29 +72,12 @@ void display(void) {
     glBegin(GL_LINES);
 
 //    for (i = 0; i < NENDS; i++) {
-        glVertex2i(0, 0);
-        glVertex2i(1, 1);
-        glVertex2i(2, 4);
-        glVertex2i(3, 9);
-        glVertex2i(10, 100);
-        glVertex2i(20, 1);
-        glVertex2i(30, 4);
-        glVertex2i(40, 9);
-
     
-    tcflush(fd, TCIFLUSH);
-    while (!write(fd, "s", 1));
-    int bytes = 0;
-    while (bytes < 1020) {
-        ioctl(fd, FIONREAD, &bytes);
-        }
-    read(fd,inFromArduino,1020);
-    std::cout<<inFromArduino<<std::endl<<std::flush;
-
-    
-//        glVertex2i(i, i1);
-//        glVertex2i(i, i1*=i);
-//    }
+    i = 0;
+    while (inFromArduino1[i]) {
+    glVertex2i(i, inFromArduino1[i]);
+    i++;
+    }
     
     glEnd();
     glFlush();

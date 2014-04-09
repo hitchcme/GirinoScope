@@ -10,7 +10,7 @@
 		<Property Name="server.vi.callsEnabled" Type="Bool">true</Property>
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
-		<Item Name="Interface.vi" Type="VI" URL="../../../Projects/Girino Scope/Interface.vi"/>
+		<Item Name="Interface.vi" Type="VI" URL="../GirinoScope_NILV/Interface.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Dynamic To Waveform Array.vi" Type="VI" URL="/&lt;vilib&gt;/express/express shared/transition.llb/Dynamic To Waveform Array.vi"/>
@@ -28,15 +28,15 @@
 				<Item Name="VISA Flush IO Buffer Mask.ctl" Type="VI" URL="/&lt;vilib&gt;/Instr/_visa.llb/VISA Flush IO Buffer Mask.ctl"/>
 				<Item Name="Waveform Array To Dynamic.vi" Type="VI" URL="/&lt;vilib&gt;/express/express shared/transition.llb/Waveform Array To Dynamic.vi"/>
 			</Item>
-			<Item Name="Check Ready.vi" Type="VI" URL="../../../Projects/Girino Scope/Check Ready.vi"/>
-			<Item Name="CMD and expected feedback.vi" Type="VI" URL="../../../Projects/Girino Scope/CMD and expected feedback.vi"/>
-			<Item Name="Control 1.ctl" Type="VI" URL="../../../Projects/Girino Scope/Control 1.ctl"/>
-			<Item Name="Get Presets.vi" Type="VI" URL="../../../Projects/Girino Scope/Get Presets.vi"/>
-			<Item Name="How many bytes to look for.vi" Type="VI" URL="../../../Projects/Girino Scope/How many bytes to look for.vi"/>
-			<Item Name="Init.vi" Type="VI" URL="../../../Projects/Girino Scope/Init.vi"/>
+			<Item Name="Check Ready.vi" Type="VI" URL="../GirinoScope_NILV/Check Ready.vi"/>
+			<Item Name="CMD and expected feedback.vi" Type="VI" URL="../GirinoScope_NILV/CMD and expected feedback.vi"/>
+			<Item Name="Control 1.ctl" Type="VI" URL="../GirinoScope_NILV/Control 1.ctl"/>
+			<Item Name="Get Presets.vi" Type="VI" URL="../GirinoScope_NILV/Get Presets.vi"/>
+			<Item Name="How many bytes to look for.vi" Type="VI" URL="../GirinoScope_NILV/How many bytes to look for.vi"/>
+			<Item Name="Init.vi" Type="VI" URL="../GirinoScope_NILV/Init.vi"/>
 			<Item Name="lvanlys.framework" Type="Document" URL="/&lt;resource&gt;/lvanlys.framework"/>
-			<Item Name="Time Scale Calibration.vi" Type="VI" URL="../../../Projects/Girino Scope/Time Scale Calibration.vi"/>
-			<Item Name="Transmit Command.vi" Type="VI" URL="../../../Projects/Girino Scope/Transmit Command.vi"/>
+			<Item Name="Time Scale Calibration.vi" Type="VI" URL="../GirinoScope_NILV/Time Scale Calibration.vi"/>
+			<Item Name="Transmit Command.vi" Type="VI" URL="../GirinoScope_NILV/Transmit Command.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>

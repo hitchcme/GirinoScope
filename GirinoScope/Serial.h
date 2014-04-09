@@ -13,6 +13,8 @@ int fd;
 
 char *inFromArduino = new char[255];
 char *outToArduino = new char[255];
+int inFromArduino1[1020];
+
 
 long int buffsiz;
 long int baudrat;

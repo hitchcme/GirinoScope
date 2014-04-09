@@ -38,6 +38,24 @@ int main(int argc, const char * argv[]) {
                       // initial buffer size, baud rate, wait duration,
                       // prescaler, trigger, and threshold.
     get_data(fd);
+
+    
+    tcflush(fd, TCIFLUSH);
+    while (!write(fd, "s", 1));
+    
+    int bytes = 0;
+    while (bytes <= 254) {
+        std::cout<<"Waiting for bytes"<<std::endl;
+        std::cout<<"  We have "<<bytes<<" bytes, so far"<<std::endl<<std::flush;
+        ioctl(fd, FIONREAD, &bytes);
+    }
+    read(fd,inFromArduino,255);
+    int i=0;
+    int inFromArduino1[255];
+    while (inFromArduino[i]) {
+        inFromArduino1[i]= static_cast<unsigned char>(inFromArduino[i]);
+        std::cout<<inFromArduino1[i]<<std::endl<<std::flush;
+    }
     
     init_disp();
     /* --- register callbacks with GLUT --- */
