@@ -113,8 +113,46 @@ void get_presets(int fd) {
 
 }
 
-void get_data(int fd) {
+std::string send_cmd(int fd, char cmd, int bytes) {
+
+    int byte_cnt = 0;
+    int bytes_at_port = 0;
     
+    int i1=0;
+    while (i1 <= 5 && byte_cnt <= 0) {
+        i1++;
+        tcflush(fd, TCIFLUSH);
+        tcflush(fd, TCOFLUSH);
+        
+        std::cout<<"Main Loop Iteration: "<<i1<<std::endl<<std::flush;
+        
+        byte_cnt = 0;
+        bytes_at_port = 0;
+
+        int i21=0;
+        while (i21 < 5 && write(fd, &cmd, 1) <= 0) {
+            std::cout<<"While Loop 1 Iteration:"<<i21<<std::endl<<std::flush;
+            i21++;
+        }
+        int i22 = 0;
+        while (i22 < 100000 && bytes_at_port < bytes) {
+            ioctl(fd, FIONREAD, &bytes_at_port);
+            std::cout<<"While Loop 2 Iteration:"<<i22<<"   BAP: "<<bytes_at_port<<"  BTWF: "<<bytes<<std::endl<<std::flush;
+            i22++;
+        }
+        
+        int i23 = 0;
+        while (i23 < 5 && byte_cnt < bytes_at_port) {
+            byte_cnt += read(fd,inFromArduino,bytes);
+            std::cout<<"While Loop 3 Iteration:"<<i23<<std::endl<<std::flush;
+            i23++;
+        }
+
+        sleep(1);
+        
+    }
+    
+    return inFromArduino;
 }
 
 #endif

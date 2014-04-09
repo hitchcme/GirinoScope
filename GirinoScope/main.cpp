@@ -37,7 +37,7 @@ int main(int argc, const char * argv[]) {
     get_presets(fd);  // Write command "d", and GirinoScope will report:
                       // initial buffer size, baud rate, wait duration,
                       // prescaler, trigger, and threshold.
-    get_data(fd);
+//    get_data(fd);
 
     
     tcflush(fd, TCIFLUSH);
