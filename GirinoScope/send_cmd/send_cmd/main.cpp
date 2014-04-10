@@ -9,6 +9,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <iostream>
 #include <termios.h>
 #include <unistd.h>
@@ -32,7 +33,7 @@ int main(int argc, const char * argv[]) {
     // prescaler, trigger, and threshold.
 
 
-    cout<<send_cmd(fd, *argv[2], 1020)<<endl;
+    cout<<send_cmd(fd, argv[2], *argv[3], atoi(argv[4]))<<endl;
 
     
 }

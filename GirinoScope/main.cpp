@@ -33,29 +33,30 @@ int main(int argc, const char * argv[]) {
 
     int fd = open(argv[1], O_RDWR | O_NOCTTY | O_NDELAY);
 
-    check_ready(fd);  // GirinoScope will report "Girino Ready"
-    get_presets(fd);  // Write command "d", and GirinoScope will report:
-                      // initial buffer size, baud rate, wait duration,
-                      // prescaler, trigger, and threshold.
-//    get_data(fd);
-
+    check_ready(fd);            //  Check Girino Ready.
     
-    tcflush(fd, TCIFLUSH);
-    while (!write(fd, "s", 1));
+    cout<<inFromArduino<<endl;
     
-    int bytes = 0;
-    while (bytes <= 254) {
-        std::cout<<"Waiting for bytes"<<std::endl;
-        std::cout<<"  We have "<<bytes<<" bytes, so far"<<std::endl<<std::flush;
-        ioctl(fd, FIONREAD, &bytes);
-    }
-    read(fd,inFromArduino,255);
-    int i=0;
-    int inFromArduino1[255];
-    while (inFromArduino[i]) {
-        inFromArduino1[i]= static_cast<unsigned char>(inFromArduino[i]);
-        std::cout<<inFromArduino1[i]<<std::endl<<std::flush;
-    }
+    send_cmd(fd, "r3", 2, 109);
+    
+    cout<<inFromArduino<<endl;
+    
+    get_presets(fd);
+        cout<<"Buffer Size:   "<<buffsiz<<endl;
+        cout<<"Baud Rate:     "<<baudrat<<endl;
+        cout<<"Wait Duration: "<<waitdur<<endl;
+        cout<<"Prescaler:     "<<prescal<<endl;
+        cout<<"Trigger:       "<<trigger<<endl;
+        cout<<"Threshold:     "<<thresho<<endl;
+    
+//    for (int i=0; i<=20; i++) {
+    send_cmd(fd, "s", 1, 1020);
+        cout<<inFromArduino<<endl;
+//    }
+//    while (wfsd[i]) {
+//        inFromArduino1[i]= static_cast<unsigned char>(inFromArduino[i]);
+//        std::cout<<inFromArduino1[i]<<std::endl<<std::flush;
+//    }
     
     init_disp();
     /* --- register callbacks with GLUT --- */

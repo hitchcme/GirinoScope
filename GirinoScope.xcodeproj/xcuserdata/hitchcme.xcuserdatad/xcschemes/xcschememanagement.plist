@@ -9,9 +9,19 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>snd_cmd.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>1C064F1B18F5E87E0003CBA9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>1C28427A18F34CC700D11ADC</key>
 		<dict>
 			<key>primary</key>

@@ -14,6 +14,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		1C064F1A18F5E87E0003CBA9 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		1C28427918F34CC700D11ADC /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -27,6 +36,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1C064F1C18F5E87E0003CBA9 /* snd_cmd */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = sourcecode.asm; path = snd_cmd; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C2391CE18F4632200F77841 /* Serial.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Serial.h; sourceTree = "<group>"; };
 		1C2391D118F4963600F77841 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		1C2391D318F4966000F77841 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
@@ -37,6 +47,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1C064F1918F5E87E0003CBA9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1C28427818F34CC700D11ADC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -63,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				1C28427B18F34CC700D11ADC /* GirinoScope */,
+				1C064F1C18F5E87E0003CBA9 /* snd_cmd */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -81,6 +99,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1C064F1B18F5E87E0003CBA9 /* snd_cmd */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1C064F2218F5E87E0003CBA9 /* Build configuration list for PBXNativeTarget "snd_cmd" */;
+			buildPhases = (
+				1C064F1818F5E87E0003CBA9 /* Sources */,
+				1C064F1918F5E87E0003CBA9 /* Frameworks */,
+				1C064F1A18F5E87E0003CBA9 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = snd_cmd;
+			productName = snd_cmd;
+			productReference = 1C064F1C18F5E87E0003CBA9 /* snd_cmd */;
+			productType = "com.apple.product-type.tool";
+		};
 		1C28427A18F34CC700D11ADC /* GirinoScope */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1C28428418F34CC700D11ADC /* Build configuration list for PBXNativeTarget "GirinoScope" */;
@@ -120,11 +155,19 @@
 			projectRoot = "";
 			targets = (
 				1C28427A18F34CC700D11ADC /* GirinoScope */,
+				1C064F1B18F5E87E0003CBA9 /* snd_cmd */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1C064F1818F5E87E0003CBA9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1C28427718F34CC700D11ADC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -136,6 +179,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		1C064F2318F5E87E0003CBA9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1C064F2418F5E87E0003CBA9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		1C28428218F34CC700D11ADC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -212,6 +269,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1C064F2218F5E87E0003CBA9 /* Build configuration list for PBXNativeTarget "snd_cmd" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C064F2318F5E87E0003CBA9 /* Debug */,
+				1C064F2418F5E87E0003CBA9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		1C28427618F34CC700D11ADC /* Build configuration list for PBXProject "GirinoScope" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
