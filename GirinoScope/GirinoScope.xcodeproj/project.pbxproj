@@ -1,0 +1,353 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1C9C5BA11900611A00DC1094 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C9C5BA01900611A00DC1094 /* Cocoa.framework */; };
+		1C9C5BAB1900611A00DC1094 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1C9C5BA91900611A00DC1094 /* InfoPlist.strings */; };
+		1C9C5BAD1900611A00DC1094 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C9C5BAC1900611A00DC1094 /* main.m */; };
+		1C9C5BB11900611A00DC1094 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 1C9C5BAF1900611A00DC1094 /* Credits.rtf */; };
+		1C9C5BBA1900611B00DC1094 /* GirinoScope.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1C9C5BB81900611B00DC1094 /* GirinoScope.xcdatamodeld */; };
+		1C9C5BD2190061A000DC1094 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C9C5BC2190061A000DC1094 /* AppDelegate.m */; };
+		1C9C5BD3190061A000DC1094 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 1C9C5BC3190061A000DC1094 /* Credits.rtf */; };
+		1C9C5BD5190061A000DC1094 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C9C5BC7190061A000DC1094 /* MainMenu.xib */; };
+		1C9C5BD9190061A000DC1094 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C9C5BCE190061A000DC1094 /* IOKit.framework */; };
+		1C9C5BDA190061A000DC1094 /* MyOpenGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C9C5BD0190061A000DC1094 /* MyOpenGLView.m */; };
+		1C9C5BDB190061A000DC1094 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C9C5BD1190061A000DC1094 /* OpenGL.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1C9C5B9D1900611A00DC1094 /* GirinoScope.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GirinoScope.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C9C5BA01900611A00DC1094 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		1C9C5BA31900611A00DC1094 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		1C9C5BA41900611A00DC1094 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		1C9C5BA51900611A00DC1094 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1C9C5BA81900611A00DC1094 /* GirinoScope-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GirinoScope-Info.plist"; sourceTree = "<group>"; };
+		1C9C5BAA1900611A00DC1094 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1C9C5BAC1900611A00DC1094 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1C9C5BAE1900611A00DC1094 /* GirinoScope-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GirinoScope-Prefix.pch"; sourceTree = "<group>"; };
+		1C9C5BB01900611A00DC1094 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		1C9C5BB91900611B00DC1094 /* GirinoScope.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GirinoScope.xcdatamodel; sourceTree = "<group>"; };
+		1C9C5BC1190061A000DC1094 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = GirinoScope/AppDelegate.h; sourceTree = SOURCE_ROOT; };
+		1C9C5BC2190061A000DC1094 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = GirinoScope/AppDelegate.m; sourceTree = SOURCE_ROOT; };
+		1C9C5BC4190061A000DC1094 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		1C9C5BC8190061A000DC1094 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		1C9C5BCE190061A000DC1094 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IOKit.framework; sourceTree = "<group>"; };
+		1C9C5BCF190061A000DC1094 /* MyOpenGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyOpenGLView.h; sourceTree = "<group>"; };
+		1C9C5BD0190061A000DC1094 /* MyOpenGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyOpenGLView.m; sourceTree = "<group>"; };
+		1C9C5BD1190061A000DC1094 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenGL.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1C9C5B9A1900611A00DC1094 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C9C5BA11900611A00DC1094 /* Cocoa.framework in Frameworks */,
+				1C9C5BD9190061A000DC1094 /* IOKit.framework in Frameworks */,
+				1C9C5BDB190061A000DC1094 /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1C9C5B941900611A00DC1094 = {
+			isa = PBXGroup;
+			children = (
+				1C9C5BCF190061A000DC1094 /* MyOpenGLView.h */,
+				1C9C5BD0190061A000DC1094 /* MyOpenGLView.m */,
+				1C9C5BC7190061A000DC1094 /* MainMenu.xib */,
+				1C9C5BA61900611A00DC1094 /* GirinoScope */,
+				1C9C5B9F1900611A00DC1094 /* Frameworks */,
+				1C9C5B9E1900611A00DC1094 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1C9C5B9E1900611A00DC1094 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1C9C5B9D1900611A00DC1094 /* GirinoScope.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1C9C5B9F1900611A00DC1094 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1C9C5BCE190061A000DC1094 /* IOKit.framework */,
+				1C9C5BD1190061A000DC1094 /* OpenGL.framework */,
+				1C9C5BA01900611A00DC1094 /* Cocoa.framework */,
+				1C9C5BA21900611A00DC1094 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1C9C5BA21900611A00DC1094 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1C9C5BA31900611A00DC1094 /* AppKit.framework */,
+				1C9C5BA41900611A00DC1094 /* CoreData.framework */,
+				1C9C5BA51900611A00DC1094 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		1C9C5BA61900611A00DC1094 /* GirinoScope */ = {
+			isa = PBXGroup;
+			children = (
+				1C9C5BC1190061A000DC1094 /* AppDelegate.h */,
+				1C9C5BC2190061A000DC1094 /* AppDelegate.m */,
+				1C9C5BC3190061A000DC1094 /* Credits.rtf */,
+				1C9C5BA81900611A00DC1094 /* GirinoScope-Info.plist */,
+				1C9C5BA91900611A00DC1094 /* InfoPlist.strings */,
+				1C9C5BAC1900611A00DC1094 /* main.m */,
+				1C9C5BAE1900611A00DC1094 /* GirinoScope-Prefix.pch */,
+				1C9C5BAF1900611A00DC1094 /* Credits.rtf */,
+				1C9C5BB81900611B00DC1094 /* GirinoScope.xcdatamodeld */,
+			);
+			path = GirinoScope;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1C9C5B9C1900611A00DC1094 /* GirinoScope */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1C9C5BBD1900611B00DC1094 /* Build configuration list for PBXNativeTarget "GirinoScope" */;
+			buildPhases = (
+				1C9C5B991900611A00DC1094 /* Sources */,
+				1C9C5B9A1900611A00DC1094 /* Frameworks */,
+				1C9C5B9B1900611A00DC1094 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GirinoScope;
+			productName = GirinoScope;
+			productReference = 1C9C5B9D1900611A00DC1094 /* GirinoScope.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1C9C5B951900611A00DC1094 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = Hitch;
+			};
+			buildConfigurationList = 1C9C5B981900611A00DC1094 /* Build configuration list for PBXProject "GirinoScope" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1C9C5B941900611A00DC1094;
+			productRefGroup = 1C9C5B9E1900611A00DC1094 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1C9C5B9C1900611A00DC1094 /* GirinoScope */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1C9C5B9B1900611A00DC1094 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C9C5BAB1900611A00DC1094 /* InfoPlist.strings in Resources */,
+				1C9C5BB11900611A00DC1094 /* Credits.rtf in Resources */,
+				1C9C5BD3190061A000DC1094 /* Credits.rtf in Resources */,
+				1C9C5BD5190061A000DC1094 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1C9C5B991900611A00DC1094 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C9C5BAD1900611A00DC1094 /* main.m in Sources */,
+				1C9C5BBA1900611B00DC1094 /* GirinoScope.xcdatamodeld in Sources */,
+				1C9C5BD2190061A000DC1094 /* AppDelegate.m in Sources */,
+				1C9C5BDA190061A000DC1094 /* MyOpenGLView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1C9C5BA91900611A00DC1094 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1C9C5BAA1900611A00DC1094 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1C9C5BAF1900611A00DC1094 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1C9C5BB01900611A00DC1094 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		1C9C5BC3190061A000DC1094 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1C9C5BC4190061A000DC1094 /* en */,
+			);
+			name = Credits.rtf;
+			path = GirinoScope_Cocoa;
+			sourceTree = SOURCE_ROOT;
+		};
+		1C9C5BC7190061A000DC1094 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1C9C5BC8190061A000DC1094 /* en */,
+			);
+			name = MainMenu.xib;
+			path = GirinoScope_Cocoa;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1C9C5BBB1900611B00DC1094 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		1C9C5BBC1900611B00DC1094 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		1C9C5BBE1900611B00DC1094 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GirinoScope/GirinoScope-Prefix.pch";
+				INFOPLIST_FILE = "GirinoScope/GirinoScope-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1C9C5BBF1900611B00DC1094 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GirinoScope/GirinoScope-Prefix.pch";
+				INFOPLIST_FILE = "GirinoScope/GirinoScope-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1C9C5B981900611A00DC1094 /* Build configuration list for PBXProject "GirinoScope" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C9C5BBB1900611B00DC1094 /* Debug */,
+				1C9C5BBC1900611B00DC1094 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1C9C5BBD1900611B00DC1094 /* Build configuration list for PBXNativeTarget "GirinoScope" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C9C5BBE1900611B00DC1094 /* Debug */,
+				1C9C5BBF1900611B00DC1094 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1C9C5BB81900611B00DC1094 /* GirinoScope.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1C9C5BB91900611B00DC1094 /* GirinoScope.xcdatamodel */,
+			);
+			currentVersion = 1C9C5BB91900611B00DC1094 /* GirinoScope.xcdatamodel */;
+			path = GirinoScope.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 1C9C5B951900611A00DC1094 /* Project object */;
+}
